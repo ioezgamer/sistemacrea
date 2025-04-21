@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Programa extends Model
 {
-    protected $table = 'Programas'; // Nombre de la tabla en la base de datos
+    protected $table = 'programas'; // Nombre de la tabla en la base de datos
 
     protected $primaryKey = 'Programa_ID'; // Nombre de la clave primaria
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comunidad extends Model
 {
-    protected $table = 'Comunidad';
+    protected $table = 'comunidad';
     protected $primaryKey = 'Comunidad_ID';
     public $incrementing = true;
     protected $fillable = ['NombreComunidad'];
