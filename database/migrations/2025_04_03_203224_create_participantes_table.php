@@ -23,7 +23,7 @@ return new class extends Migration
             // Clave foránea (si ya tenés una tabla "comunidads")
             $table->foreign('comunidad_id')
                   ->references('id')
-                  ->on('comunidads')
+                  ->on('comunidades')
                   ->onDelete('set null');
         });
     }
