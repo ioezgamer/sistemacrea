@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('escuelas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('codigo_centro')->nullable();
+            $table->string('direccion')->nullable();
+            $table->unsignedBigInteger('comunidad_id')->nullable();
             $table->timestamps();
+
+            // Relación con comunidades
+            $table->foreign('comunidad_id')->references('id')->on('comunidades')->onDelete('set null');
         });
     }
 

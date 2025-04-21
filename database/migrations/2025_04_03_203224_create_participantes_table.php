@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('participantes', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('cedula')->unique();
+            $table->date('fecha_nacimiento')->nullable();
+            $table->unsignedBigInteger('comunidad_id')->nullable(); // Ejemplo de FK a comunidad
             $table->timestamps();
+
+            // Clave foránea (si ya tenés una tabla "comunidads")
+            $table->foreign('comunidad_id')
+                  ->references('id')
+                  ->on('comunidads')
+                  ->onDelete('set null');
         });
     }
 
