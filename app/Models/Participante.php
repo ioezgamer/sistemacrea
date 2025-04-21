@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Participante extends Model
 {
-    protected $table = 'Participantes';
+    protected $table = 'participantes';
     protected $primaryKey = 'Participante_ID';
     public $incrementing = true;
     public $timestamps = false; // Desactiva timestamps
